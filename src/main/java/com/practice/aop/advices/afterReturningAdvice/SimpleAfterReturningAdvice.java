@@ -1,6 +1,6 @@
-package com.practice.aop.afterReturningAdvice;
+package com.practice.aop.advices.afterReturningAdvice;
 
-import com.practice.aop.beforeAdvice.Guitarist;
+import com.practice.aop.advices.beforeAdvice.Guitarist;
 import org.springframework.aop.AfterReturningAdvice;
 import org.springframework.aop.framework.ProxyFactory;
 

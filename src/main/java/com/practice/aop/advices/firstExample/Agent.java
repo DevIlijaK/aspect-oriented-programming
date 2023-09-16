@@ -1,4 +1,4 @@
-package com.practice.aop.firstExample;
+package com.practice.aop.advices.firstExample;
 
 public class Agent {
     public void speak() {

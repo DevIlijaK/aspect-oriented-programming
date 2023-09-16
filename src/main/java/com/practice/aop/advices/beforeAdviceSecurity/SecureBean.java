@@ -1,4 +1,4 @@
-package com.practice.aop.beforeAdviceSecurity;
+package com.practice.aop.advices.beforeAdviceSecurity;
 
 public class SecureBean {
     public void writeSecureMessage() {

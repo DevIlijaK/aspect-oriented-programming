@@ -1,4 +1,4 @@
-package com.practice.aop.beforeAdvice;
+package com.practice.aop.advices.beforeAdvice;
 
 import org.springframework.aop.MethodBeforeAdvice;
 import org.springframework.aop.framework.ProxyFactory;
