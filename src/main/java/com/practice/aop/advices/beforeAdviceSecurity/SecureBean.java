@@ -2,7 +2,6 @@ package com.practice.aop.advices.beforeAdviceSecurity;
 
 public class SecureBean {
     public void writeSecureMessage() {
-        System.out.println("Every time I learn something new, "
-                + "it pushes some old stuff out of my brain");
+        System.out.println("This message can only be seen by logged in users");
     }
 }

@@ -24,8 +24,8 @@ public class SecurityAdvice implements MethodBeforeAdvice {
             throw new SecurityException(
                     "You must login before attempting to invoke the method: "
                             + method.getName());
-        } else if ("John".equals(user.getUserName())) {
-            System.out.println("Logged in user is John - OKAY!");
+        } else if ("Stefan".equals(user.getUserName())) {
+            System.out.println("Logged in user is Stefan - OKAY!");
         } else {
             System.out.println("Logged in user is " + user.getUserName()
                     + " NOT GOOD :(");

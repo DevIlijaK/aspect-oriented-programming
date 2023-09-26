@@ -6,11 +6,11 @@ public class SecurityDemo {
     public static void main(String... args) {
         SecurityManager mgr = new SecurityManager();
         SecureBean bean = getSecureBean();
-        mgr.login("John", "pwd");
+        mgr.login("Stefan", "123");
         bean.writeSecureMessage();
         mgr.logout();
         try {
-            mgr.login("invalid user", "pwd");
+            mgr.login("invalid user", "123");
             bean.writeSecureMessage();
         } catch(SecurityException ex) {
             System.out.println("Exception Caught: " + ex.getMessage());
