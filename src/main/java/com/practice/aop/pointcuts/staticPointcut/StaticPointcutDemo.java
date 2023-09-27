@@ -32,6 +32,8 @@ public class StaticPointcutDemo {
         pf.setTarget(ericClapton);
         proxyTwo = (Singer)pf.getProxy();
         proxyOne.sing();
+        proxyOne.sing();
+        proxyOne.sing();
         proxyTwo.sing();
     }
 }
