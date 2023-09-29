@@ -24,7 +24,7 @@ public class AnnotatedAdvice {
     @Before("singExecution(value) && isJohn()")
     public void simpleBeforeAdvice(JoinPoint joinPoint, Guitar value) {
         if (value.getBrand().equals("Gibson")) {
-            System.out.println("Executing: " +
+            System.out.println("Before advice, executing: " +
                     joinPoint.getSignature().getDeclaringTypeName() + " "
                     + joinPoint.getSignature().getName() + " argument: " + value.getBrand());
         }
@@ -32,12 +32,13 @@ public class AnnotatedAdvice {
     @Around("singExecution(value) && isJohn()")
     public Object simpleAroundAdvice(ProceedingJoinPoint pjp,
                                      Guitar value) throws Throwable {
-        System.out.println("Before execution: " +
+        System.out.println("\n");
+        System.out.println("Around advice, before execution: " +
                 pjp.getSignature().getDeclaringTypeName() + " "
                 + pjp.getSignature().getName()
                 + " argument: " + value.getBrand());
         Object retVal = pjp.proceed();
-        System.out.println("After execution: " +
+        System.out.println("Around advice, after execution: " +
                 pjp.getSignature().getDeclaringTypeName() + " "
                 + pjp.getSignature().getName()
                 + " argument: " + value.getBrand());

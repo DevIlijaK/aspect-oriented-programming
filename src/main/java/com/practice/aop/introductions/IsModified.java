@@ -1,5 +1,5 @@
 package com.practice.aop.introductions;
 
-public interface isModified {
+public interface IsModified {
     boolean isModified();
 }

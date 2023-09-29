@@ -4,7 +4,7 @@ import org.aspectj.lang.JoinPoint;
 
 public class SimpleAdvice {
     public void simpleBeforeAdvice(JoinPoint joinPoint) {
-        System.out.println("Executing: " +
+        System.out.println("Before advice, Executing: " +
                 joinPoint.getSignature().getDeclaringTypeName() + " "
                 + joinPoint.getSignature().getName());
     }

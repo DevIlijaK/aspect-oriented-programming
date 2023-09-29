@@ -10,6 +10,21 @@
     <aop:config>
         <aop:pointcut id="singExecution" expression="execution(
         * com.practice.aop.frameworkAOPServices..sing*(com.practice.aop.pointcuts.nameMatching.Guitar))"/>
+<!--        1) The asterisk (*) is a wildcard character that matches any combination of characters or-->
+<!--        packages in the package hierarchy.-->
+<!--        2) com.practice.aop.frameworkAOPServices: This is a package name. It specifies a specific-->
+<!--        package in your application where you want to apply the aspect.-->
+<!--        ..: The double-dot (..) is another wildcard that matches any number of subpackages and-->
+<!--        classes. It is often used to indicate that the pointcut should apply to classes in-->
+<!--        subpackages as well.-->
+<!--        3) sing*: This part of the expression specifies a method name pattern. It uses the asterisk (*)-->
+<!--        as a wildcard to match any method that starts with "sing."-->
+<!--        4) (com.practice.aop.pointcuts.nameMatching.Guitar): This is a parameter pattern. It specifies-->
+<!--        that the method being matched should have a single parameter of type-->
+<!--        "com.practice.aop.pointcuts.nameMatching.Guitar."-->
+<!--        5) we want to advise all methods with the prefix sing, and the classes are defined under the-->
+<!--        package com.practice.aop.frameworkAOPServices (including all the subpackages). Also, the sing() method should receive-->
+<!--        one argument with the Guitar type-->
         <aop:aspect ref="advice">
             <aop:before pointcut-ref="singExecution"
                         method="simpleBeforeAdvice"/>
